@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 25px;
+  color: #000;
+  font-family: "Shrikhand";
+}
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+h3 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+h4 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 100;
+  color: #000;
+}
+
+.container {
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin: 0;
+}
+
+.loader {
+  animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
+  position: fixed;
+  width: 128px;
+  height: 128px;
+  top: 50%;
+  left: 25%;
+  z-index: 100;
+  background-color: #806f94;
+  border-radius: 50%;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+
+.loader p  {
+ justify-content: center;
+ justify-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header a {
+  justify-content: flex-start;
+  left: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+.header .fas.fa-arrow-left {
+  padding: 0 0 0 10px;
+}
+
+.header h1 {
+  margin: 0px;
+  padding: 0px;
+  font-family: Shrikhand;
+  font-size: 30px;
+  color: #000;
+}
+
+.imagefond {
+  display: flex;
+  height: 180px;
+  width: 100%;
+  position: absolute;
+  transform-origin: bottom;
+}
+
+.imagefond img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carte.carte--fond {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  top: 150px;
+  background-color: #e5e5e5;
+  border-radius: 15px 15px 0px 0px;
+  margin-top: -25px;
+  margin-bottom: 150px;
+  z-index: 2;
+}
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+.carte-titremenu {
+  display: flex;
+  padding-left: 15px;
+}
+
+.carte-titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+.carte-titre h2 {
+  font-family: 'Shrikhand';
+}
+
+.deuxcoeurs {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deuxcoeurs .plein {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+
+.deuxcoeurs:hover > .plein {
+  animation: opacity 500ms 0ms linear both;
+  z-index: 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.carte__plats {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.carte__plats.titre {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding: 0;
+}
+
+.carte__plats.menu {
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 10px;
+  flex-direction: row;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 3;
+}
+
+.slide-left {
+  width: 0px;
+}
+
+.fas.fa-check-circle {
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #fff;
+  color: rgb(149, 235, 149);
+}
+
+.carte__plats.contenu {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 0px 10px 0px;
+  width: 40%;
+}
+
+.carte__plats .complete,
+.carte__plats .accompagnement {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0;
+}
+
+.prix {
+  display: flex;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  width: 20%;
+}
+
+.carte__plats .slide-left {
+  background-color: #99e2d0;
+  margin: -10px -70px -10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.carte__plats:hover > .slide-left > .fas.fa-check-circle {
+  animation: rotate-left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: left;
+  }
+}
+
+.carte__plats:hover > .slide-left {
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  width: 50px;
+  transform: translateX(-50px);
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+.carte__plats .menu {
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bouton {
+  height: 80px;
+  display: flex;
+  padding: 10px 0;
+  background: #F6F6F6;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.bouton .bouton__commander {
+  height: 60px;
+  width: 210px;
+  margin: 30px auto;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #fff;
+  background: -o-linear-gradient(bottom, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 50%);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px 15px 0px;
+  background-color: #333232;
+  width: 100%;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: center;
+}
+
+footer ul li {
+  color: #f2f2f2;
+  font-size: 17px;
+  list-style: none;
+  padding: 10px 0 0 0;
+}
+
+footer h2 {
+  color: #f2f2f2;
+  font-family: "Shrikhand";
+}
+
+footer li a {
+  text-decoration-line: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .fa-utensils,
+.fa-hands-helping {
+  margin-right: 10px;
+}
