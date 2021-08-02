@@ -4,6 +4,7 @@ body {
   background-color: #ffff;
   height: 100%;
   width: 100%;
+  font-family: 'Roboto';
 }
 
 h1 {
@@ -49,7 +50,7 @@ h4 {
   width: 128px;
   height: 128px;
   top: 50%;
-  left: 25%;
+  left: 30%;
   z-index: 100;
   background-color: #806f94;
   border-radius: 50%;
@@ -66,7 +67,6 @@ h4 {
   }
 }
 
-
 .loader p  {
  justify-content: center;
  justify-items: center;
@@ -80,19 +80,18 @@ h4 {
   background-color: #fff;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .header a {
   justify-content: flex-start;
-  left: 15px;
+  left: 1px;
   font-size: 30px;
   text-decoration: none;
   color: #000;
 }
 
 .header .fas.fa-arrow-left {
-  padding: 0 0 0 10px;
+  padding: 0 0 0 20px;
 }
 
 .header h1 {
@@ -101,6 +100,7 @@ h4 {
   font-family: Shrikhand;
   font-size: 30px;
   color: #000;
+  padding-left: 50px;
 }
 
 .imagefond {
@@ -175,17 +175,35 @@ h3 {
   justify-content: center;
 }
 
-.deuxcoeurs .plein {
+.fas.fa-heart {
   height: 25px;
   width: 25px;
   position: absolute;
   opacity: 0;
-  z-index: 2;
+  z-index: 0;
 }
 
-.deuxcoeurs:hover > .plein {
+.far.fa-heart {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.deuxcoeurs:hover > .far.fa-heart {
+  animation: opacity 500ms 0ms linear both;
+  z-index: 0;
+  font-size: 2px;
+}
+
+.deuxcoeurs:hover > .fas.fa-heart {
   animation: opacity 500ms 0ms linear both;
   z-index: 1;
+  size: 3x;
+  color: #9356DC;
+  font-size: 22px;
 }
 
 @keyframes opacity {
@@ -197,6 +215,7 @@ h3 {
     opacity: 1;
   }
 }
+
 .carte__plats {
   display: flex;
   flex-direction: column;
@@ -230,26 +249,28 @@ h3 {
 }
 
 .fas.fa-check-circle {
-  padding: 5px;
   border-radius: 15px;
-  background-color: #fff;
-  color: rgb(149, 235, 149);
+  color: #f2f2f2;
 }
 
 .carte__plats.contenu {
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  flex: 1;
   padding: 15px 0px 10px 0px;
   width: 40%;
 }
 
-.carte__plats .complete,
-.carte__plats .accompagnement {
+.carte__plats .complete {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 0;
+  white-space: nowrap;
+}
+
+.carte__plats .accompagnement  {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0;
+  white-space: nowrap;
 }
 
 .prix {
@@ -267,7 +288,7 @@ h3 {
   justify-content: center;
   display: flex;
   color: white;
-  font-size: 1.5em;
+  font-size: 24px;
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   transition: width 0.3s ease-in-out;
@@ -283,7 +304,7 @@ h3 {
     transform-origin: left;
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
     transform-origin: left;
   }
 }
@@ -292,6 +313,7 @@ h3 {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 50px;
   transform: translateX(-50px);
+  text-overflow: ellipsis;
 }
 
 @keyframes slide-left {
@@ -380,4 +402,70 @@ footer li a {
 footer .fa-utensils,
 .fa-hands-helping {
   margin-right: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  .carte__plats {
+    display: flex;
+    flex-wrap: wrap;
+  }  
+
+  .header h1 {
+    padding-left: 450px;
+  }
+
+  .loader {
+    animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
+    position: fixed;
+    width: 128px;
+    height: 128px;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    background-color: #806f94;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px 15px 0px;
+    background-color: #333232;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 1;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  footer ul li {
+    color: #f2f2f2;
+    font-size: 17px;
+    list-style: none;
+    padding: 10px 0 0 0;
+    text-decoration: none;
+  }
+  
+  footer li a {
+    text-decoration-line: none;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  footer h2 {
+    color: #f2f2f2;
+    font-family: "Shrikhand";
+  }
+  
+  footer .fa-utensils,
+  .fa-hands-helping {
+    margin-right: 10px;
+  }
 }
