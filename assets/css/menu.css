@@ -216,7 +216,7 @@ h3 {
   }
 }
 
-.carte__plats {
+.carte-plats  {
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
@@ -224,7 +224,7 @@ h3 {
   margin-top: 0;
 }
 
-.carte__plats.titre {
+.carte-plats .titre {
   margin-bottom: 0px;
   margin-top: 10px;
   text-transform: uppercase;
@@ -233,7 +233,7 @@ h3 {
   padding: 0;
 }
 
-.carte__plats.menu {
+.carte-plats .menu {
   display: flex;
   background-color: #fff;
   border-radius: 15px;
@@ -253,20 +253,20 @@ h3 {
   color: #f2f2f2;
 }
 
-.carte__plats.contenu {
+.carte-plats .contenu {
   flex: 1;
   padding: 15px 0px 10px 0px;
   width: 40%;
 }
 
-.carte__plats .complete {
+.carte-plats__complete {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 0;
   white-space: nowrap;
 }
 
-.carte__plats .accompagnement  {
+.carte-plats__accompagnement  {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 0;
@@ -280,7 +280,7 @@ h3 {
   width: 20%;
 }
 
-.carte__plats .slide-left {
+.carte-plats  .slide-left {
   background-color: #99e2d0;
   margin: -10px -70px -10px 0;
   display: flex;
@@ -294,22 +294,20 @@ h3 {
   transition: width 0.3s ease-in-out;
 }
 
-.carte__plats:hover > .slide-left > .fas.fa-check-circle {
-  animation: rotate-left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+.carte-plats :hover > .slide-left > .fas.fa-check-circle {
+  animation: rotate360 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
-@keyframes rotate-left {
+@keyframes rotate360 {
   0% {
     transform: rotate(0);
-    transform-origin: left;
   }
   100% {
-    transform: rotate(-360deg);
-    transform-origin: left;
+    transform: rotate(360deg);
   }
 }
 
-.carte__plats:hover > .slide-left {
+.carte-plats :hover > .slide-left {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 50px;
   transform: translateX(-50px);
@@ -325,7 +323,7 @@ h3 {
   }
 }
 
-.carte__plats .menu {
+.carte-plats  .menu {
   animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -404,7 +402,7 @@ footer .fa-utensils,
 }
 
 @media only screen and (min-width: 700px) {
-  .carte__plats {
+  .carte-plats  {
     display: flex;
     flex-wrap: wrap;
   }  
