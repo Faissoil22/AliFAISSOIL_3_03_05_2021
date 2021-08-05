@@ -336,7 +336,7 @@ h3 {
   margin-top: 10px;
 }
 
-.bouton .bouton__commander {
+.bouton__commander--rose {
   height: 60px;
   width: 210px;
   margin: 30px auto;
@@ -348,7 +348,7 @@ h3 {
   box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 50%);
 }
 
-.bouton__commander:hover {
+.bouton__commander--rose:hover {
   background: linear-gradient(to top, #9356dc, #ff79da);
 }
 
