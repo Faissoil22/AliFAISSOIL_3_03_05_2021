@@ -4,7 +4,7 @@ body {
   background-color: #ffff;
   height: 100%;
   width: 100%;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 h1 {
@@ -44,18 +44,6 @@ h4 {
   margin: 0;
 }
 
-.loader {
-  animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
-  position: fixed;
-  width: 128px;
-  height: 128px;
-  top: 50%;
-  left: 30%;
-  z-index: 100;
-  background-color: #806f94;
-  border-radius: 50%;
-}
-
 @keyframes rotate-center {
   0% {
     transform: rotate(0);
@@ -67,9 +55,9 @@ h4 {
   }
 }
 
-.loader p  {
- justify-content: center;
- justify-items: center;
+.loader p {
+  justify-content: center;
+  justify-items: center;
 }
 
 .header {
@@ -164,7 +152,7 @@ h3 {
 }
 
 .carte-titre h2 {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
 }
 
 .deuxcoeurs {
@@ -202,7 +190,7 @@ h3 {
   animation: opacity 500ms 0ms linear both;
   z-index: 1;
   size: 3x;
-  color: #FF79DA;
+  color: #ff79da;
   font-size: 22px;
 }
 
@@ -216,7 +204,7 @@ h3 {
   }
 }
 
-.carte-plats  {
+.carte-plats {
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
@@ -228,7 +216,7 @@ h3 {
   margin-bottom: 0px;
   margin-top: 10px;
   text-transform: uppercase;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   width: 40px;
   padding: 0;
 }
@@ -266,7 +254,7 @@ h3 {
   white-space: nowrap;
 }
 
-.carte-plats__accompagnement  {
+.carte-plats__accompagnement {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 0;
@@ -280,7 +268,7 @@ h3 {
   width: 20%;
 }
 
-.carte-plats  .slide-left {
+.carte-plats .slide-left {
   background-color: #99e2d0;
   margin: -10px -70px -10px 0;
   display: flex;
@@ -323,7 +311,7 @@ h3 {
   }
 }
 
-.carte-plats  .menu {
+.carte-plats .menu {
   animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -342,7 +330,7 @@ h3 {
   height: 80px;
   display: flex;
   padding: 10px 0;
-  background: #F6F6F6;
+  background: #f6f6f6;
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -356,9 +344,12 @@ h3 {
   border-radius: 30px;
   font-size: 18px;
   color: #fff;
-  background: -o-linear-gradient(bottom, #9356DC, #FF79DA);
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: #9356dc;
   box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 50%);
+}
+
+.bouton__commander:hover {
+  background: linear-gradient(to top, #9356dc, #ff79da);
 }
 
 footer {
@@ -402,10 +393,10 @@ footer .fa-utensils,
 }
 
 @media only screen and (min-width: 700px) {
-  .carte-plats  {
+  .carte-plats {
     display: flex;
     flex-wrap: wrap;
-  }  
+  }
 
   .header h1 {
     padding-left: 450px;
@@ -441,7 +432,7 @@ footer .fa-utensils,
     padding: 0;
     justify-content: center;
   }
-  
+
   footer ul li {
     color: #f2f2f2;
     font-size: 17px;
@@ -449,18 +440,18 @@ footer .fa-utensils,
     padding: 10px 0 0 0;
     text-decoration: none;
   }
-  
+
   footer li a {
     text-decoration-line: none;
     text-decoration: none;
     color: #fff;
   }
-  
+
   footer h2 {
     color: #f2f2f2;
     font-family: "Shrikhand";
   }
-  
+
   footer .fa-utensils,
   .fa-hands-helping {
     margin-right: 10px;

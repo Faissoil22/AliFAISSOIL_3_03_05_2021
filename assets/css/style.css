@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffff;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 .container {
   flex-direction: column;
@@ -51,6 +51,38 @@ h4 {
   padding: 0;
 }
 
+.loader {
+  display: flex;
+  animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  left: 10%;
+  z-index: 1;
+  opacity: 1;
+  background-color: #9356dc;
+  border-radius: 50%;
+}
+
+.loader p {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(180deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 .header h1 {
   display: flex;
   height: 60px;
@@ -90,8 +122,12 @@ h4 {
   font-size: 16px;
   font-weight: 500;
   margin: 20px 0px 20px 0px;
-  background: linear-gradient(170deg, #ff79da 6%, #9356dc 100%);
+  background: #9356dc;
   box-shadow: 1px 1px 12px #dddddd;
+}
+
+.explorer-bouton:hover {
+  background-color: #ff79da;
 }
 
 .explorer-bouton p {
@@ -147,7 +183,6 @@ nav.fonctionnement {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
   margin-left: -10px;
 }
 
@@ -181,15 +216,9 @@ nav.fonctionnement {
   color: #888383;
 }
 
-.restaurants {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #f2f2f2;
-}
 
 .fonctionnement__boutons:hover {
-  background-color: #e9cce1;
+  background-color: #f8bae7;
 }
 
 .fonctionnement__boutons:hover .fas.fa-mobile-alt {
@@ -202,6 +231,13 @@ nav.fonctionnement {
 
 .fonctionnement__boutons:hover .fas.fas.fa-store {
   color: #9356dc;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f2f2f2;
 }
 
 .restaurants h2 {
@@ -251,8 +287,8 @@ nav.fonctionnement {
   margin-right: 20px;
   margin-top: 20px;
   color: #278870;
-  background: #99E2D0;
-  align-items: center;;
+  background: #99e2d0;
+  align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
@@ -270,15 +306,14 @@ nav.fonctionnement {
   margin-right: 20px;
   margin-top: 20px;
   color: #278870;
-  background: #99E2D0;
-  align-items: center;;
+  background: #99e2d0;
+  align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
   border: none;
 }
-
 
 .carte .bloc-description {
   display: flex;
@@ -320,7 +355,7 @@ nav.fonctionnement {
   width: 30px;
   opacity: 0;
   z-index: 0;
-  color:#ff79da;
+  color: #ff79da;
 }
 
 .far.fa-heart {
@@ -355,7 +390,6 @@ nav.fonctionnement {
     opacity: 1;
   }
 }
-
 
 footer {
   display: flex;
@@ -398,33 +432,58 @@ footer .fa-utensils,
 }
 
 
-.loader {
-  animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
-  position: fixed;
-  width: 128px;
-  height: 128px;
-  top: 50%;
-  left: 30%;
-  z-index: 100;
-  background-color: #806f94;
-  border-radius: 50%;
-  text-align: center;
-}
-
-@keyframes rotate-center {
-  0% {
-    transform: rotate(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-}
-
-
 
 @media only screen and (min-width: 767.98px) {
+  .container {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .loader {
+    display: flex;
+    animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    left: 30%;
+    top: 5%;
+    z-index: 1;
+    background-color: #9356dc;
+    border-radius: 50%;
+  }
+
+  @keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+      opacity: 1;
+      z-index: 1;
+    }
+    100% {
+      transform: rotate(180deg);
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .loader p {
+    width: 400px;
+    align-items: center;
+    display: flex;
+    margin: 150px;
+    z-index: 1;
+  }
+
+  .explorer-bouton {
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0px 20px 0px;
+    background: #9356dc;
+    box-shadow: 1px 1px 12px #dddddd;
+  }
+
   #fonctionnement {
     display: flex;
     width: 100%;
@@ -441,10 +500,70 @@ footer .fa-utensils,
   .fonctionnement__boutons {
     display: flex;
     align-items: center;
-    flex: 25%;
+    width: 30%;
     box-shadow: 2px 1px 1px 1px #c3c3c3;
-    margin: 20px;
+    margin: 20px 0px;
     border-radius: 15px;
+  }
+  
+  .fonctionnement__boutons .label {
+    width: 2px;
+    height: 2px;
+    background: #9356dc;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+  }
+  
+  .fonctionnement__boutons ul li {
+    display: block;
+    list-style: none;
+  }
+  
+  .fonctionnement__boutons .icone {
+    margin: 0 15px 0 15px;
+  }
+  
+  .fonctionnement__boutons ul {
+    padding: 0;
+  }
+  
+  .fonctionnement__boutons ul .nom {
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+  }
+  .fonctionnement__boutons .fas.fa-store {
+    color: #888383;
+  }
+  
+  .fonctionnement__boutons,
+  .fas.fa-mobile-alt,
+  .fas.fa-list-ul {
+    color: #888383;
+  }
+  
+  
+  .fonctionnement__boutons:hover {
+    background-color: #f8bae7;
+  }
+  
+  .fonctionnement__boutons:hover .fas.fa-mobile-alt {
+    color: #9356dc;
+  }
+  
+  .fonctionnement__boutons:hover .fas.fa-list-ul {
+    color: #9356dc;
+  }
+  
+  .fonctionnement__boutons:hover .fas.fas.fa-store {
+    color: #9356dc;
   }
 
   .articles {
@@ -467,8 +586,8 @@ footer .fa-utensils,
     margin-right: 20px;
     margin-top: 20px;
     color: #278870;
-    background: #99E2D0;
-    align-items: center;;
+    background: #99e2d0;
+    align-items: center;
     justify-content: center;
     font-size: 14px;
     font-weight: 500;
@@ -476,18 +595,6 @@ footer .fa-utensils,
     border: none;
   }
 
-  .loader {
-    animation: rotate-center 0.6s ease-in-out 2s 4 forwards;
-    position: fixed;
-    width: 128px;
-    height: 128px;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    background-color: #806f94;
-    border-radius: 50%;
-    text-align: center;
-  }
 
   footer {
     display: flex;
@@ -505,7 +612,7 @@ footer .fa-utensils,
     padding: 0;
     justify-content: center;
   }
-  
+
   footer ul li {
     color: #f2f2f2;
     font-size: 17px;
@@ -513,20 +620,20 @@ footer .fa-utensils,
     padding: 10px 0 0 0;
     text-decoration: none;
   }
-  
+
   footer li a {
     text-decoration-line: none;
     text-decoration: none;
     color: #fff;
   }
-  
+
   footer h2 {
     color: #f2f2f2;
     font-family: "Shrikhand";
   }
-  
+
   footer .fa-utensils,
   .fa-hands-helping {
     margin-right: 10px;
   }
-} 
+}
