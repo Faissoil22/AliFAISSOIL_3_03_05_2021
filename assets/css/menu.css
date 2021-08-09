@@ -154,9 +154,7 @@ h3 {
   font-size: 20px;
 }
 
-
-
-.deuxcoeurs:hover > .fas.fa-heart {
+.deuxcoeurs:hover .fas.fa-heart  {
   animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   z-index: 1;
   height: 30px;
@@ -179,7 +177,7 @@ h3 {
   }
 }
 
-.deuxcoeurs:hover > .far.fa-heart {
+ .deuxcoeurs:hover .far.fa-heart {
   animation: opacity 500ms 0ms linear both;
   z-index: 0;
   font-size: 0px;
